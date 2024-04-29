@@ -1,12 +1,11 @@
 package ait.cohort34.book.dao;
 
 import ait.cohort34.book.model.Book;
-import ait.cohort34.book.model.Publisher;
-import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
 import java.util.stream.Stream;
 
-public interface BookRepository extends JpaRepository<Book, String> {
+public interface BookRepository {
 
     Stream<Book> findByAuthorsName(String authorName);
 
@@ -14,4 +13,11 @@ public interface BookRepository extends JpaRepository<Book, String> {
 
     void deleteByAuthorsName(String name);
 
+    boolean existsById(String isbn);
+
+    Book save(Book book);
+
+    Optional<Book> findById(String isbn);
+
+    void deleteById(String isbn);
 }

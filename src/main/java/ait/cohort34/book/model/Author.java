@@ -6,7 +6,6 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.Set;
 
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,8 +19,7 @@ public class Author {
     String name;
     @Column(name = "birth_date")
     LocalDate birthDate;
-
-    @ManyToMany(mappedBy = "authors",cascade = CascadeType.REMOVE)
+    @ManyToMany(mappedBy = "authors", cascade = CascadeType.REMOVE)
     Set<Book> books;
 
     public Author(String name, LocalDate birthDate) {

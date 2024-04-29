@@ -2,7 +2,6 @@ package ait.cohort34.book.dto;
 
 import java.util.Set;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Getter

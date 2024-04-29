@@ -17,10 +17,8 @@ public class Publisher {
     @Id
     @Column(name = "publisher_name")
     String publisherName;
-
     @OneToMany(mappedBy = "publisher")
     Set<Book> books;
-
 
     public Publisher(String publisherName) {
         this.publisherName = publisherName;

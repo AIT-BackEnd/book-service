@@ -8,6 +8,6 @@ import lombok.Getter;
 @Getter
 @EqualsAndHashCode(of = "name")
 public class AuthorDto {
-    String name;
-    LocalDate birthDate;
+	String name;
+	LocalDate birthDate;
 }
